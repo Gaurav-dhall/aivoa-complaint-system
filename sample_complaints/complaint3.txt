@@ -1,0 +1,40 @@
+From: procurement@wellnesspharmacychain.com
+To: qualityaffairs@pharmaco.com
+Subject: Complaint - Packaging Defect - Atorvastatin 20mg - Batch AT-2025-0341
+
+Dear Quality Affairs Team,
+
+This is to bring to your attention a packaging-related complaint identified during
+routine stock verification at our central warehouse.
+
+Customer Name: Wellness Pharmacy Chain
+Product Name: Atorvastatin Calcium Tablets 20mg
+Product Strength: 20mg
+Batch/Lot Number: AT-2025-0341
+Manufacturing Date: January 2025
+Expiry Date: December 2026
+Quantity Affected: 850 strips (approximately 8500 tablets)
+
+Complaint Type: Packaging Defect
+
+Description of Issue:
+Multiple blister strips from this batch were found with improperly sealed cavities,
+allowing tablets to move freely and, in a few cases, fall out during transit. Out of
+a sample check of 50 strips, 6 strips exhibited this sealing defect. No visible damage
+to the tablets themselves was observed, and there is no indication of moisture ingress
+or tablet degradation at this time.
+
+While this does not appear to pose an immediate patient safety risk, it raises concerns
+about packaging line quality control and could affect product shelf life if moisture
+ingress occurs later in distribution.
+
+Severity Assessment: Major
+Priority: Medium
+
+We request an investigation into the blister packaging line and corrective action
+to prevent recurrence in future batches.
+
+Regards,
+Anil Kapoor
+Procurement & Quality Coordinator, Wellness Pharmacy Chain
+Complaint Date: 2025-01-18

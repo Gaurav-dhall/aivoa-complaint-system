@@ -1,0 +1,28 @@
+From: compliance@healthfirst.org
+Subject: URGENT - Foreign Particle Found - Amoxicillin 250mg - Batch AM-2024-1104
+
+URGENT QUALITY COMPLAINT
+
+Customer: HealthFirst Hospital Network
+Product Name: Amoxicillin Trihydrate Capsules 250mg
+Product Strength: 250mg
+Batch Number: AM-2024-1104
+Manufacturing Date: October 2024
+Expiry Date: September 2026
+Quantity Affected: 5000 capsules (entire shipment)
+
+Complaint Type: Foreign Particle / Contamination
+
+Description:
+During patient dispensing, our pharmacy staff discovered black foreign particles
+inside multiple capsules from the above batch. The particles appear to be metallic
+in nature. We have quarantined the entire shipment immediately.
+
+This is a potential patient safety risk. We require immediate recall consideration
+and root cause investigation.
+
+Complaint Date: 2024-12-20
+Severity: Critical
+Priority: Critical
+
+Contact: Dr. Rajesh Nair, Chief Pharmacist

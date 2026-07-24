@@ -1,0 +1,30 @@
+From: quality.assurance@citymedicals.com
+To: complaints@pharmaco.com
+Subject: Complaint - Metformin 500mg Color Variation - Batch BT-2024-0892
+
+Dear Customer Quality Team,
+
+We are writing to formally report a quality complaint regarding Metformin Hydrochloride
+Tablets 500mg received on December 10, 2024.
+
+Customer Name: City Medicals Pvt Ltd
+Product: Metformin Hydrochloride Tablets 500mg
+Batch/Lot Number: BT-2024-0892
+Manufacturing Date: September 2024
+Expiry Date: August 2026
+Quantity Affected: 200 tablets (approximately 2 kg)
+
+Nature of Complaint:
+Upon inspection, we observed visible color variation across tablets in the same batch.
+Approximately 15-20% of the tablets show a darker shade compared to the standard
+white color specification. This was noticed during our incoming quality check.
+
+This may indicate a manufacturing process deviation and could affect patient confidence
+in the product.
+
+Severity Assessment: Moderate
+Please investigate and provide a CAPA report at the earliest.
+
+Regards,
+Priya Sharma
+Quality Assurance Manager, City Medicals Pvt Ltd
