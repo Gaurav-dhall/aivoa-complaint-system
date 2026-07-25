@@ -178,6 +178,13 @@ GROQ_API_KEY=your_groq_api_key_here
 DATABASE_URL=postgresql://username:password@localhost:5432/aivoa_complaints
 ```
 
+## Database Setup
+
+This project uses **PostgreSQL** (via Neon.tech) by default.
+
+> **No PostgreSQL?** No problem — if `DATABASE_URL` is not set in `.env`, 
+> the app automatically falls back to **SQLite** (zero setup required).
+
 ## Free PostgreSQL Setup (2 minutes)
 1. Go to neon.tech → Sign up free
 2. Create new project → Copy connection string
