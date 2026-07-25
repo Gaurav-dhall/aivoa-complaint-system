@@ -4,6 +4,16 @@ An intelligent complaint intake and management system built for the pharmaceutic
 
 ---
 
+## Demo Video
+
+> 📹 [Watch Demo Video](https://drive.google.com/file/d/1ek7cYi_8tkDu6WT3Oyccf5h9oXLTMOeK/view?usp=sharing)
+
+The demo covers:
+- Uploading a complaint document and watching the form auto-populate
+- Using the AI chat assistant to edit form fields conversationally
+- LangGraph agent walkthrough — each node executing step by step in the terminal
+- Bonus features: Completeness Checker, Duplicate Detection, CAPA Analysis
+
 ## Tech Stack
 
 | Layer | Technology |
