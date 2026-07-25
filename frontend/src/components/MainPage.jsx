@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useSelector, useDispatch } from 'react-redux';
+import CompletenessChecker from './CompletenessChecker';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
   updateField,
@@ -376,6 +377,9 @@ const LeftPanel = () => {
           </div>
         </div>
       </div>
+
+      {/* Completeness Checker */}
+      <CompletenessChecker />
 
       {/* Footer buttons */}
       <button

@@ -1,0 +1,58 @@
+From: qa.head@reliancehealthcare.in
+To: complaints@pharmaco.com
+Subject: Urgent Quality Complaint - Amoxicillin Capsules 500mg - Batch AX-2025-3381 - Foreign Particulate Matter
+
+Dear QMS / Quality Assurance Team,
+
+We are raising a formal quality complaint regarding a batch of Amoxicillin Trihydrate
+Capsules 500mg received at our central distribution warehouse on 18 July 2025.
+
+─── COMPLAINT DETAILS ───────────────────────────────────────────────────────
+
+Customer Name:        Reliance Healthcare Distribution Ltd
+Product:              Amoxicillin Trihydrate Capsules
+Product Strength:     500mg
+Batch / Lot Number:   AX-2025-3381
+Manufacturing Date:   March 2025
+Expiry Date:          February 2028
+Quantity Affected:    1,200 capsules (approx. 6 kg) — 4 cartons from the shipment
+Originating Site:     Oral Solid Dosage Block 2, Baddi Manufacturing Plant
+Complaint Source:     Direct Customer Complaint (email)
+Complaint Date:       19 July 2025
+
+─── NATURE OF COMPLAINT ─────────────────────────────────────────────────────
+
+Complaint Type / Category: Foreign Particulate Matter / Physical Contamination
+
+During our routine incoming quality check (IQC), our QA inspector identified visible
+black and dark-brown particulate matter embedded inside the capsule shells across
+multiple units in Batch AX-2025-3381. The particles range from 0.5mm to 2mm in size
+and appear to be of metallic or carbonaceous origin.
+
+Affected units were quarantined immediately. An estimated 40–50 capsules from two
+separate cartons (Carton IDs: C-04 and C-07) were confirmed to contain the particles.
+The contamination does not appear to be a surface defect; the particles are encapsulated
+within the fill powder, suggesting introduction at the blending or encapsulation stage.
+
+─── SEVERITY & RISK ASSESSMENT ─────────────────────────────────────────────
+
+Severity:   Critical
+Priority:   High
+
+This constitutes a potential patient safety risk. Ingestion of foreign particulate matter
+of unknown origin — particularly if metallic — could cause harm to patients. We are
+placing a full distribution hold on all remaining stock from this batch pending your
+investigation and a formal CAPA response.
+
+We request:
+  1. Immediate acknowledgement of this complaint within 24 hours
+  2. A root cause analysis (RCA) and corrective action plan (CAPA) within 30 days
+  3. Written confirmation of your market withdrawal or recall decision, if applicable
+
+─── CONTACT ─────────────────────────────────────────────────────────────────
+
+Ananya Kapoor
+Head, Quality Assurance
+Reliance Healthcare Distribution Ltd
+ananya.kapoor@reliancehealthcare.in
++91-98765-43210
