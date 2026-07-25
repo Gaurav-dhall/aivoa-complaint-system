@@ -178,6 +178,11 @@ GROQ_API_KEY=your_groq_api_key_here
 DATABASE_URL=postgresql://username:password@localhost:5432/aivoa_complaints
 ```
 
+## Free PostgreSQL Setup (2 minutes)
+1. Go to neon.tech → Sign up free
+2. Create new project → Copy connection string
+3. Paste in .env as DATABASE_URL
+
 ```bash
 uvicorn main:app --reload
 # API runs at http://localhost:8000
