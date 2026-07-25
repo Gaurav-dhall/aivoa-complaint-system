@@ -103,21 +103,28 @@ def list_complaints(db: Session = Depends(get_db)):
 # GET /api/complaints/check-duplicate
 # ─────────────────────────────────────────────
 @router.get("/complaints/check-duplicate")
-def check_duplicate(batch: str, product: str, db: Session = Depends(get_db)):
+def check_duplicate(batch: Optional[str] = "", product: Optional[str] = "", db: Session = Depends(get_db)):
+    if not batch or not product or not batch.strip() or not product.strip():
+        return {"duplicate": False, "message": "No batch or product provided for duplicate check."}
+
     existing = (
         db.query(Complaint)
         .filter(
             and_(
-                Complaint.batch_number == batch,
-                Complaint.product_name == product,
+                Complaint.batch_number == batch.strip(),
+                Complaint.product_name == product.strip(),
             )
         )
         .order_by(Complaint.created_at.desc())
         .first()
     )
     if existing:
-        return {"duplicate": True, "existing_complaint_id": existing.id}
-    return {"duplicate": False}
+        return {
+            "duplicate": True,
+            "existing_complaint_id": existing.id,
+            "message": f"Duplicate Complaint Detected! Complaint #{existing.id} already exists for Product '{product.strip()}' with Batch '{batch.strip()}'."
+        }
+    return {"duplicate": False, "message": "No duplicate found."}
 
 
 # ─────────────────────────────────────────────

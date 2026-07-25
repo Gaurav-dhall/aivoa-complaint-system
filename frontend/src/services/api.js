@@ -45,4 +45,16 @@ export const getComplaints = () => {
   return api.get('/complaints');
 };
 
+/**
+ * Check if a complaint with the same batch number and product name already exists.
+ * @param {string} batch - Batch number
+ * @param {string} product - Product name
+ * @returns {Promise<object>} Duplicate check result containing { duplicate, existing_complaint_id, message }.
+ */
+export const checkDuplicate = (batch, product) => {
+  return api.get('/complaints/check-duplicate', {
+    params: { batch, product },
+  });
+};
+
 export default api;

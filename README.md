@@ -35,7 +35,7 @@ An intelligent complaint intake and management system built for the pharmaceutic
 **Bonus Features**
 - **Complaint Completeness Checker** — shows a live % score based on mandatory fields filled; lists missing fields in red
 - **Duplicate Detection** — checks DB for same batch number + product before saving; shows a warning modal with the existing complaint ID
-- **CAPA + Risk Classification** — AI generates root cause hypothesis, risk type (Patient Safety / Product Quality / Regulatory Compliance), and top 3 corrective action recommendations
+- **CAPA + Risk Classification** — AI generates root cause hypothesis, risk type (Patient Safety / Product Quality / Regulatory Compliance), and corrective action recommendations
 - **AI Summary** — auto-generated 2-sentence executive summary stored with every complaint
 
 ---

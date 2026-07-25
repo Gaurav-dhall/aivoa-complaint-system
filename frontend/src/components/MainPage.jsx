@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useSelector, useDispatch } from 'react-redux';
 import CompletenessChecker from './CompletenessChecker';
+import Toast from './Toast';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
   updateField,
@@ -10,7 +11,7 @@ import {
   addChatMessage,
   setProcessing,
 } from '../store/complaintSlice';
-import { extractComplaint, chatMessage, saveComplaint } from '../services/api';
+import { extractComplaint, chatMessage, saveComplaint, checkDuplicate } from '../services/api';
 
 // ─── SVG Icons ────────────────────────────────────────────────────────────────
 
@@ -154,9 +155,35 @@ const LeftPanel = () => {
   const field = (name, value) =>
     dispatch(updateField({ field: name, value }));
 
+  const [toast, setToast] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleCommit = async () => {
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+    setToast(null);
+
     try {
-      await saveComplaint({
+      // 1. Check duplicate first if batch_number & product_name are present
+      if (batch_number || product_name) {
+        const dupRes = await checkDuplicate(batch_number, product_name);
+        if (dupRes.data && dupRes.data.duplicate) {
+          const duplicateMsg =
+            dupRes.data.message ||
+            `Duplicate complaint detected! Matching record found for Product '${product_name}' and Batch '${batch_number}'.`;
+          
+          setToast({
+            title: 'Duplicate Complaint Detected',
+            message: duplicateMsg,
+            type: 'warning',
+          });
+          setIsSubmitting(false);
+          return; // STOP! Do not commit duplicate
+        }
+      }
+
+      // 2. If no duplicate, save complaint
+      const res = await saveComplaint({
         complaint_source,
         customer_name,
         product_name,
@@ -178,9 +205,20 @@ const LeftPanel = () => {
         suggested_next_action,
         initial_risk_assessment,
       });
-      alert('Complaint committed to QMS Ledger!');
-    } catch {
-      alert('Failed to commit. Please check the backend connection.');
+
+      setToast({
+        title: 'Committed Successfully',
+        message: `Complaint #${res.data.id} has been saved to the QMS Ledger!`,
+        type: 'success',
+      });
+    } catch (err) {
+      setToast({
+        title: 'Commit Failed',
+        message: err?.response?.data?.detail || 'Failed to commit complaint. Please check the backend connection.',
+        type: 'error',
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -381,12 +419,23 @@ const LeftPanel = () => {
       {/* Completeness Checker */}
       <CompletenessChecker />
 
+      {/* Toast Notification popping from top-right */}
+      {toast && (
+        <Toast
+          title={toast.title}
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast(null)}
+        />
+      )}
+
       {/* Footer buttons */}
       <button
         onClick={handleCommit}
-        className="w-full bg-[#5046e6] hover:bg-indigo-700 text-white font-semibold text-base py-4 rounded-xl mt-8 transition-colors"
+        disabled={isSubmitting}
+        className="w-full bg-[#5046e6] hover:bg-indigo-700 disabled:opacity-50 text-white font-semibold text-base py-4 rounded-xl mt-8 transition-colors"
       >
-        Commit to QMS Ledger
+        {isSubmitting ? 'Checking & Committing...' : 'Commit to QMS Ledger'}
       </button>
       <div className="text-center mt-3 mb-4">
         <button
