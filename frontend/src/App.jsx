@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import MainPage from './components/MainPage';
+import ComplaintsList from './components/ComplaintsList';
 
 function App() {
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1 style={{ fontFamily: 'Inter, sans-serif' }}>
-        AIVOA Complaint System
-      </h1>
-      <p>Redux + React setup complete ✅</p>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/complaints" element={<ComplaintsList />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

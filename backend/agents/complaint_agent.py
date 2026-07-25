@@ -101,13 +101,15 @@ Keys to extract:
 - product_name
 - product_strength
 - batch_number
-- manufacturing_date (format: YYYY-MM-DD if possible, else as written)
-- expiry_date (format: YYYY-MM-DD if possible, else as written)
+- manufacturing_date (MUST be in YYYY-MM-DD format. If only month and year are given, default the day to 01. Example: "September 2024" → "2024-09-01". If unknown, use null.)
+- expiry_date (MUST be in YYYY-MM-DD format. If only month and year are given, default the day to 01. Example: "August 2026" → "2026-08-01". If unknown, use null.)
 - quantity_affected (just the number, no units)
 - quantity_unit (e.g. "kg", "tablets", "capsules")
 - complaint_type (e.g. "Color variation", "Foreign particle", "Packaging defect")
-- complaint_date (format: YYYY-MM-DD if possible, else as written)
+- complaint_date (MUST be in YYYY-MM-DD format. If only month and year are given, default the day to 01. If unknown, use null.)
 - description (a clean 1-2 sentence summary of the actual complaint)
+- originating_site_block (the manufacturing site, facility, plant, or block mentioned in the complaint — extract as plain text exactly as mentioned, e.g. "Unit 3 - Baddi Plant", "Site B", "Formulation Block 2". Use null if not mentioned.)
+- npm (any non-product materials mentioned such as primary packaging, labels, blister foil, bottles, cartons — extract as a short descriptive string. Use null if not mentioned.)
 
 If a field cannot be found in the text, use null for its value.
 
@@ -203,7 +205,8 @@ Based on this, return ONLY a valid JSON object with these keys:
 - severity: one of "Minor", "Moderate", "Major", "Critical"
 - priority: one of "Low", "Medium", "High", "Critical"
 - risk_type: one of "Patient Safety", "Product Quality", "Regulatory Compliance"
-- root_cause_hypothesis: a single sentence hypothesis
+- root_cause_hypothesis: a single sentence hypothesis about the likely root cause
+- capa_recommendations: a list of 2-3 short recommended corrective and preventive actions (strings), e.g. ["Quarantine affected batch", "Initiate CAPA investigation", "Notify regulatory affairs"]
 - summary: a 2-sentence executive summary of this complaint
 
 Return ONLY the JSON object, no explanation, no markdown."""
